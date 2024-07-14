@@ -23,7 +23,7 @@ func (c *conventionalCommit) minimal() bool {
 	return c._type != "" && c.descr != ""
 }
 
-func (c *conventionalCommit) export() conventionalcommits.Message {
+func (c *conventionalCommit) export() *conventionalcommits.ConventionalCommit {
 	out := &conventionalcommits.ConventionalCommit{}
 	out.Exclamation = c.exclamation
 	out.Type = strings.ToLower(c._type)
